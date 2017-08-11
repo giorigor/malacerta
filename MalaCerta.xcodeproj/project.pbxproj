@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		3F9FBC5E1F3DD8E900F5A39F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC5D1F3DD8E900F5A39F /* AppDelegate.swift */; };
-		3F9FBC601F3DD8E900F5A39F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC5F1F3DD8E900F5A39F /* ViewController.swift */; };
 		3F9FBC631F3DD8E900F5A39F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9FBC611F3DD8E900F5A39F /* Main.storyboard */; };
 		3F9FBC661F3DD8E900F5A39F /* MalaCerta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC641F3DD8E900F5A39F /* MalaCerta.xcdatamodeld */; };
 		3F9FBC681F3DD8E900F5A39F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9FBC671F3DD8E900F5A39F /* Assets.xcassets */; };
 		3F9FBC6B1F3DD8E900F5A39F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9FBC691F3DD8E900F5A39F /* LaunchScreen.storyboard */; };
+		3F9FBC771F3DDA1400F5A39F /* TimelineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC761F3DDA1400F5A39F /* TimelineController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F9FBC5A1F3DD8E900F5A39F /* MalaCerta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MalaCerta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9FBC5D1F3DD8E900F5A39F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F9FBC5F1F3DD8E900F5A39F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F9FBC621F3DD8E900F5A39F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F9FBC651F3DD8E900F5A39F /* MalaCerta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MalaCerta.xcdatamodel; sourceTree = "<group>"; };
 		3F9FBC671F3DD8E900F5A39F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F9FBC6A1F3DD8E900F5A39F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F9FBC6C1F3DD8E900F5A39F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F9FBC761F3DDA1400F5A39F /* TimelineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineController.swift; path = ../TimelineController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,47 @@
 		3F9FBC5C1F3DD8E900F5A39F /* MalaCerta */ = {
 			isa = PBXGroup;
 			children = (
-				3F9FBC5D1F3DD8E900F5A39F /* AppDelegate.swift */,
-				3F9FBC5F1F3DD8E900F5A39F /* ViewController.swift */,
-				3F9FBC611F3DD8E900F5A39F /* Main.storyboard */,
-				3F9FBC671F3DD8E900F5A39F /* Assets.xcassets */,
-				3F9FBC691F3DD8E900F5A39F /* LaunchScreen.storyboard */,
-				3F9FBC6C1F3DD8E900F5A39F /* Info.plist */,
-				3F9FBC641F3DD8E900F5A39F /* MalaCerta.xcdatamodeld */,
+				3F9FBC751F3DD9C600F5A39F /* View */,
+				3F9FBC741F3DD9C100F5A39F /* Controller */,
+				3F9FBC731F3DD9B900F5A39F /* Model */,
+				3F9FBC721F3DD9AE00F5A39F /* Auxiliar Files */,
 			);
 			path = MalaCerta;
+			sourceTree = "<group>";
+		};
+		3F9FBC721F3DD9AE00F5A39F /* Auxiliar Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F9FBC5D1F3DD8E900F5A39F /* AppDelegate.swift */,
+				3F9FBC671F3DD8E900F5A39F /* Assets.xcassets */,
+				3F9FBC6C1F3DD8E900F5A39F /* Info.plist */,
+			);
+			name = "Auxiliar Files";
+			sourceTree = "<group>";
+		};
+		3F9FBC731F3DD9B900F5A39F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F9FBC641F3DD8E900F5A39F /* MalaCerta.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3F9FBC741F3DD9C100F5A39F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F9FBC761F3DDA1400F5A39F /* TimelineController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3F9FBC751F3DD9C600F5A39F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F9FBC611F3DD8E900F5A39F /* Main.storyboard */,
+				3F9FBC691F3DD8E900F5A39F /* LaunchScreen.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F9FBC601F3DD8E900F5A39F /* ViewController.swift in Sources */,
+				3F9FBC771F3DDA1400F5A39F /* TimelineController.swift in Sources */,
 				3F9FBC661F3DD8E900F5A39F /* MalaCerta.xcdatamodeld in Sources */,
 				3F9FBC5E1F3DD8E900F5A39F /* AppDelegate.swift in Sources */,
 			);
