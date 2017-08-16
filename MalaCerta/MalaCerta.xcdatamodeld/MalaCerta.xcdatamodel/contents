@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Atividade" representedClassName=".Atividade" syncable="YES" codeGenerationType="category">
+        <attribute name="fim" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="inicio" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="local" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="viagemPai" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Viagem" inverseName="ativsDaViagem" inverseEntity="Viagem" syncable="YES"/>
+    </entity>
+    <entity name="Viagem" representedClassName=".Viagem" syncable="YES" codeGenerationType="category">
+        <attribute name="fim" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="inicio" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="ativsDaViagem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Atividade" inverseName="viagemPai" inverseEntity="Atividade" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Viagem" positionX="-54" positionY="-9" width="128" height="105"/>
+        <element name="Atividade" positionX="-36" positionY="9" width="128" height="120"/>
+    </elements>
 </model>
