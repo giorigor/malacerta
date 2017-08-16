@@ -24,6 +24,7 @@
 		3F9FBC871F3DF78E00F5A39F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC861F3DF78E00F5A39F /* CoreDataManager.swift */; };
 		3F9FBC891F3DF8B200F5A39F /* Viagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC881F3DF8B200F5A39F /* Viagem.swift */; };
 		3F9FBC8B1F3DF8B900F5A39F /* Atividade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC8A1F3DF8B900F5A39F /* Atividade.swift */; };
+		3FADB6A21F44931F00DB801B /* DetalheAtividade.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FADB6A01F44931F00DB801B /* DetalheAtividade.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		3F9FBC861F3DF78E00F5A39F /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		3F9FBC881F3DF8B200F5A39F /* Viagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Viagem.swift; sourceTree = "<group>"; };
 		3F9FBC8A1F3DF8B900F5A39F /* Atividade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atividade.swift; sourceTree = "<group>"; };
+		3FADB6A11F44931F00DB801B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DetalheAtividade.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				3F9FBC611F3DD8E900F5A39F /* Main.storyboard */,
+				3FADB6A01F44931F00DB801B /* DetalheAtividade.storyboard */,
 				3F9FBC691F3DD8E900F5A39F /* LaunchScreen.storyboard */,
 			);
 			name = View;
@@ -202,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FADB6A21F44931F00DB801B /* DetalheAtividade.storyboard in Resources */,
 				3F9FBC6B1F3DD8E900F5A39F /* LaunchScreen.storyboard in Resources */,
 				3F9FBC681F3DD8E900F5A39F /* Assets.xcassets in Resources */,
 				3F9FBC631F3DD8E900F5A39F /* Main.storyboard in Resources */,
@@ -247,6 +251,14 @@
 				3F9FBC6A1F3DD8E900F5A39F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3FADB6A01F44931F00DB801B /* DetalheAtividade.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FADB6A11F44931F00DB801B /* Base */,
+			);
+			name = DetalheAtividade.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -351,11 +363,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = V867585X56;
 				INFOPLIST_FILE = MalaCerta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hackatruck.MalaCerta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -364,11 +379,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = V867585X56;
 				INFOPLIST_FILE = MalaCerta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hackatruck.MalaCerta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
