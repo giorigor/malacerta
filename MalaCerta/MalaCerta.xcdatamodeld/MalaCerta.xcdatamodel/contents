@@ -3,7 +3,7 @@
     <entity name="Atividade" representedClassName=".Atividade" syncable="YES" codeGenerationType="category">
         <attribute name="fim" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="inicio" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="local" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="local" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="viagemPai" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Viagem" inverseName="ativsDaViagem" inverseEntity="Viagem" syncable="YES"/>
     </entity>
@@ -14,7 +14,7 @@
         <relationship name="ativsDaViagem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Atividade" inverseName="viagemPai" inverseEntity="Atividade" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Viagem" positionX="-54" positionY="-9" width="128" height="105"/>
         <element name="Atividade" positionX="-36" positionY="9" width="128" height="120"/>
+        <element name="Viagem" positionX="-54" positionY="-9" width="128" height="105"/>
     </elements>
 </model>

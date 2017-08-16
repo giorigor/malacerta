@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1F419B1F4463F500244774 /* NovoDestinoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F419A1F4463F500244774 /* NovoDestinoController.swift */; };
+		3F1F419E1F44648900244774 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F419D1F44648900244774 /* MapKit.framework */; };
+		3F1F41A01F4464A500244774 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F419F1F4464A500244774 /* CoreLocation.framework */; };
+		3F1F41A21F446ED900244774 /* NovoDestinoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F41A11F446ED900244774 /* NovoDestinoCell.swift */; };
 		3F9FBC5E1F3DD8E900F5A39F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC5D1F3DD8E900F5A39F /* AppDelegate.swift */; };
 		3F9FBC631F3DD8E900F5A39F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9FBC611F3DD8E900F5A39F /* Main.storyboard */; };
 		3F9FBC661F3DD8E900F5A39F /* MalaCerta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC641F3DD8E900F5A39F /* MalaCerta.xcdatamodeld */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F1F419A1F4463F500244774 /* NovoDestinoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoDestinoController.swift; sourceTree = "<group>"; };
+		3F1F419D1F44648900244774 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3F1F419F1F4464A500244774 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3F1F41A11F446ED900244774 /* NovoDestinoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoDestinoCell.swift; sourceTree = "<group>"; };
 		3F9FBC5A1F3DD8E900F5A39F /* MalaCerta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MalaCerta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9FBC5D1F3DD8E900F5A39F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F9FBC621F3DD8E900F5A39F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,17 +55,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1F41A01F4464A500244774 /* CoreLocation.framework in Frameworks */,
+				3F1F419E1F44648900244774 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F1F419C1F44648900244774 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F1F419F1F4464A500244774 /* CoreLocation.framework */,
+				3F1F419D1F44648900244774 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3F9FBC511F3DD8E900F5A39F = {
 			isa = PBXGroup;
 			children = (
 				3F9FBC5C1F3DD8E900F5A39F /* MalaCerta */,
 				3F9FBC5B1F3DD8E900F5A39F /* Products */,
+				3F1F419C1F44648900244774 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,11 +125,13 @@
 		3F9FBC741F3DD9C100F5A39F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3F1F419A1F4463F500244774 /* NovoDestinoController.swift */,
 				3F9FBC761F3DDA1400F5A39F /* TimelineController.swift */,
 				3F9FBC781F3DEAD300F5A39F /* TravelsController.swift */,
 				3F9FBC7A1F3DEAE200F5A39F /* TravelsCell.swift */,
 				3F9FBC7C1F3DEAEB00F5A39F /* TimelineCell.swift */,
 				3F9FBC7E1F3DEAFC00F5A39F /* PlaceDetailsController.swift */,
+				3F1F41A11F446ED900244774 /* NovoDestinoCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -196,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1F41A21F446ED900244774 /* NovoDestinoCell.swift in Sources */,
 				3F9FBC7D1F3DEAEB00F5A39F /* TimelineCell.swift in Sources */,
 				3F9FBC771F3DDA1400F5A39F /* TimelineController.swift in Sources */,
 				3F9FBC661F3DD8E900F5A39F /* MalaCerta.xcdatamodeld in Sources */,
@@ -206,6 +229,7 @@
 				3F9FBC871F3DF78E00F5A39F /* CoreDataManager.swift in Sources */,
 				3F9FBC791F3DEAD300F5A39F /* TravelsController.swift in Sources */,
 				3F9FBC851F3DF2DA00F5A39F /* ViagemDAO.swift in Sources */,
+				3F1F419B1F4463F500244774 /* NovoDestinoController.swift in Sources */,
 				3F9FBC8B1F3DF8B900F5A39F /* Atividade.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

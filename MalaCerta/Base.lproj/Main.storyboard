@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar-->
         <scene sceneID="TSH-Sk-Qej">
             <objects>
-                <tabBarController id="j1w-m8-wMJ" sceneMemberID="viewController">
+                <tabBarController title="Tab Bar" id="j1w-m8-wMJ" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="SZg-F7-ErA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -32,7 +32,7 @@
         <!--Novo Destino-->
         <scene sceneID="7Ye-hT-lR0">
             <objects>
-                <tableViewController id="i7t-0U-vzt" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="NovoDestino" id="i7t-0U-vzt" customClass="NovoDestinoController" customModule="MalaCerta" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iG8-T6-ivT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="SHR-SZ-ZQe" detailTextLabel="Jv6-QG-Oqo" style="IBUITableViewCellStyleSubtitle" id="1cx-X5-A6N">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pesquisaLocalIdentifier" textLabel="SHR-SZ-ZQe" detailTextLabel="Jv6-QG-Oqo" style="IBUITableViewCellStyleSubtitle" id="1cx-X5-A6N" customClass="NovoDestinoCell" customModule="MalaCerta" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1cx-X5-A6N" id="UOi-JZ-wwU">
@@ -69,6 +69,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nomeGrande" destination="SHR-SZ-ZQe" id="Ybh-08-4Ow"/>
+                                    <outlet property="subtitulo" destination="Jv6-QG-Oqo" id="hHc-14-2TP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -76,8 +80,11 @@
                             <outlet property="delegate" destination="i7t-0U-vzt" id="OtC-E4-J7I"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Novo Destino" id="DZD-Bi-7ug"/>
+                    <navigationItem key="navigationItem" title="Novo Destino" id="DZD-Bi-7ug">
+                        <barButtonItem key="backBarButtonItem" title="Cancelar" id="O66-Gq-Xf5"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="buscaLocal" destination="Gxc-a1-02o" id="Ruo-1i-Mth"/>
                         <outlet property="searchDisplayController" destination="oja-Ly-VpP" id="dFF-c1-v1F"/>
                     </connections>
                 </tableViewController>
