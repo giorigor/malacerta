@@ -29,78 +29,6 @@
             </objects>
             <point key="canvasLocation" x="-847" y="442"/>
         </scene>
-        <!--Novo Destino-->
-        <scene sceneID="7Ye-hT-lR0">
-            <objects>
-                <tableViewController storyboardIdentifier="NovoDestino" id="i7t-0U-vzt" customClass="NovoDestinoController" customModule="MalaCerta" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iG8-T6-ivT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="Gxc-a1-02o">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="i7t-0U-vzt" id="pbs-Ak-U5y"/>
-                            </connections>
-                        </searchBar>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pesquisaLocalIdentifier" textLabel="SHR-SZ-ZQe" detailTextLabel="Jv6-QG-Oqo" style="IBUITableViewCellStyleSubtitle" id="1cx-X5-A6N" customClass="NovoDestinoCell" customModule="MalaCerta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1cx-X5-A6N" id="UOi-JZ-wwU">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Belo Horizonte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SHR-SZ-ZQe">
-                                            <rect key="frame" x="15" y="5" width="113" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Minas Gerais, Brasil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jv6-QG-Oqo">
-                                            <rect key="frame" x="15" y="25.5" width="111.5" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="nomeGrande" destination="SHR-SZ-ZQe" id="Ybh-08-4Ow"/>
-                                    <outlet property="subtitulo" destination="Jv6-QG-Oqo" id="hHc-14-2TP"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="i7t-0U-vzt" id="nhN-fg-ayD"/>
-                            <outlet property="delegate" destination="i7t-0U-vzt" id="OtC-E4-J7I"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Novo Destino" id="DZD-Bi-7ug">
-                        <barButtonItem key="backBarButtonItem" title="Cancelar" id="O66-Gq-Xf5"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="buscaLocal" destination="Gxc-a1-02o" id="Ruo-1i-Mth"/>
-                        <outlet property="searchDisplayController" destination="oja-Ly-VpP" id="dFF-c1-v1F"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nEJ-TW-pmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="oja-Ly-VpP">
-                    <connections>
-                        <outlet property="delegate" destination="i7t-0U-vzt" id="G8X-le-u1p"/>
-                        <outlet property="searchBar" destination="Gxc-a1-02o" id="WGR-Ny-dsO"/>
-                        <outlet property="searchContentsController" destination="i7t-0U-vzt" id="axz-fV-Caw"/>
-                        <outlet property="searchResultsDataSource" destination="i7t-0U-vzt" id="e5G-eZ-JYX"/>
-                        <outlet property="searchResultsDelegate" destination="i7t-0U-vzt" id="HEo-Dz-rMo"/>
-                    </connections>
-                </searchDisplayController>
-            </objects>
-            <point key="canvasLocation" x="1294" y="-674"/>
-        </scene>
         <!--Nova Atividade-->
         <scene sceneID="wdc-MS-kP0">
             <objects>
@@ -172,7 +100,7 @@
                     <navigationItem key="navigationItem" title="Minhas Viagens" id="DHE-GX-yXm">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="deC-Nz-Ldv">
                             <connections>
-                                <segue destination="i7t-0U-vzt" kind="show" id="QE9-h2-3NM"/>
+                                <segue destination="LWr-QZ-LmC" kind="show" id="5Qt-uQ-P2s"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -448,6 +376,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xML-Cl-YJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="365.60000000000002" y="837.93103448275872"/>
+        </scene>
+        <!--Novo Local-->
+        <scene sceneID="xFl-qa-Omp">
+            <objects>
+                <viewController id="LWr-QZ-LmC" customClass="NovoDestinoController" customModule="MalaCerta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Um4-zB-2F9"/>
+                        <viewControllerLayoutGuide type="bottom" id="iTu-vw-Zkp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ka3-Gz-mde">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vyb-SI-cZm">
+                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LWr-QZ-LmC" id="XRB-1a-3bJ"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vyb-SI-cZm" firstAttribute="leading" secondItem="Ka3-Gz-mde" secondAttribute="leading" id="3zU-Hv-7Tp"/>
+                            <constraint firstItem="iTu-vw-Zkp" firstAttribute="top" secondItem="Vyb-SI-cZm" secondAttribute="bottom" id="Ugw-YD-VGK"/>
+                            <constraint firstAttribute="trailing" secondItem="Vyb-SI-cZm" secondAttribute="trailing" id="X8r-vJ-1BK"/>
+                            <constraint firstItem="Vyb-SI-cZm" firstAttribute="top" secondItem="Um4-zB-2F9" secondAttribute="bottom" id="bv4-33-Nef"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Novo Local" id="LiG-8d-AbY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="PdU-eQ-ham">
+                            <connections>
+                                <action selector="showSearchBar:" destination="LWr-QZ-LmC" id="6mG-Eh-mRk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="Vyb-SI-cZm" id="leD-Id-HVN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8X-F0-eBz" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="-675"/>
         </scene>
     </scenes>
     <resources>
