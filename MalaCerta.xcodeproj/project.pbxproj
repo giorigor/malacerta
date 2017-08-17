@@ -10,6 +10,7 @@
 		3F1F419E1F44648900244774 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F419D1F44648900244774 /* MapKit.framework */; };
 		3F1F41A01F4464A500244774 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F419F1F4464A500244774 /* CoreLocation.framework */; };
 		3F1F41A81F448EAE00244774 /* NovoDestinoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F41A71F448EAE00244774 /* NovoDestinoController.swift */; };
+		3F2CD7511F45C00F00A67CBD /* Detalhes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2CD74F1F45C00F00A67CBD /* Detalhes.storyboard */; };
 		3F9FBC5E1F3DD8E900F5A39F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC5D1F3DD8E900F5A39F /* AppDelegate.swift */; };
 		3F9FBC631F3DD8E900F5A39F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9FBC611F3DD8E900F5A39F /* Main.storyboard */; };
 		3F9FBC661F3DD8E900F5A39F /* MalaCerta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC641F3DD8E900F5A39F /* MalaCerta.xcdatamodeld */; };
@@ -24,13 +25,13 @@
 		3F9FBC871F3DF78E00F5A39F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC861F3DF78E00F5A39F /* CoreDataManager.swift */; };
 		3F9FBC891F3DF8B200F5A39F /* Viagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC881F3DF8B200F5A39F /* Viagem.swift */; };
 		3F9FBC8B1F3DF8B900F5A39F /* Atividade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC8A1F3DF8B900F5A39F /* Atividade.swift */; };
-		3FADB6A21F44931F00DB801B /* DetalheAtividade.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FADB6A01F44931F00DB801B /* DetalheAtividade.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F1F419D1F44648900244774 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3F1F419F1F4464A500244774 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3F1F41A71F448EAE00244774 /* NovoDestinoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoDestinoController.swift; sourceTree = "<group>"; };
+		3F2CD7501F45C00F00A67CBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Detalhes.storyboard; sourceTree = "<group>"; };
 		3F9FBC5A1F3DD8E900F5A39F /* MalaCerta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MalaCerta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9FBC5D1F3DD8E900F5A39F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F9FBC621F3DD8E900F5A39F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		3F9FBC861F3DF78E00F5A39F /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		3F9FBC881F3DF8B200F5A39F /* Viagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Viagem.swift; sourceTree = "<group>"; };
 		3F9FBC8A1F3DF8B900F5A39F /* Atividade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atividade.swift; sourceTree = "<group>"; };
-		3FADB6A11F44931F00DB801B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DetalheAtividade.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				3F9FBC611F3DD8E900F5A39F /* Main.storyboard */,
-				3FADB6A01F44931F00DB801B /* DetalheAtividade.storyboard */,
+				3F2CD74F1F45C00F00A67CBD /* Detalhes.storyboard */,
 				3F9FBC691F3DD8E900F5A39F /* LaunchScreen.storyboard */,
 			);
 			name = View;
@@ -205,8 +205,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FADB6A21F44931F00DB801B /* DetalheAtividade.storyboard in Resources */,
 				3F9FBC6B1F3DD8E900F5A39F /* LaunchScreen.storyboard in Resources */,
+				3F2CD7511F45C00F00A67CBD /* Detalhes.storyboard in Resources */,
 				3F9FBC681F3DD8E900F5A39F /* Assets.xcassets in Resources */,
 				3F9FBC631F3DD8E900F5A39F /* Main.storyboard in Resources */,
 			);
@@ -237,6 +237,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3F2CD74F1F45C00F00A67CBD /* Detalhes.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F2CD7501F45C00F00A67CBD /* Base */,
+			);
+			name = Detalhes.storyboard;
+			sourceTree = "<group>";
+		};
 		3F9FBC611F3DD8E900F5A39F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -251,14 +259,6 @@
 				3F9FBC6A1F3DD8E900F5A39F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		3FADB6A01F44931F00DB801B /* DetalheAtividade.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FADB6A11F44931F00DB801B /* Base */,
-			);
-			name = DetalheAtividade.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
