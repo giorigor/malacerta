@@ -10,6 +10,9 @@ import UIKit
 import MapKit
 
 class NovoDestinoController: UIViewController, UISearchBarDelegate {
+	@IBAction func buttonProssegue(_ sender: Any) {
+		
+	}
     
     var searchController:UISearchController!
     var annotation:MKAnnotation!
@@ -19,6 +22,8 @@ class NovoDestinoController: UIViewController, UISearchBarDelegate {
     var error:NSError!
     var pointAnnotation:MKPointAnnotation!
     var pinAnnotationView:MKPinAnnotationView!
+	
+	var localllll: MKMapItem!
     
     @IBOutlet var mapView: MKMapView!
 
@@ -40,7 +45,7 @@ class NovoDestinoController: UIViewController, UISearchBarDelegate {
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
-		if (self.pointAnnotation == nil) {
+		if (self.pointAnnotation != nil) {
 			self.mapView.removeAnnotation(self.pointAnnotation)
 		}
         //1
@@ -65,21 +70,39 @@ class NovoDestinoController: UIViewController, UISearchBarDelegate {
             //3
             self.pointAnnotation = MKPointAnnotation()
             self.pointAnnotation.title = searchBar.text
-            self.pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: localSearchResponse!.boundingRegion.center.latitude, longitude:     localSearchResponse!.boundingRegion.center.longitude)
+            self.pointAnnotation.coordinate = (localSearchResponse?.mapItems[0].placemark.coordinate)!
+			self.localllll = (localSearchResponse?.mapItems[0])!
+
+			//CLLocationCoordinate2D(latitude: localSearchResponse!.boundingRegion.center.latitude, longitude:     localSearchResponse!.boundingRegion.center.longitude)
             
             
             self.pinAnnotationView = MKPinAnnotationView(annotation: self.pointAnnotation, reuseIdentifier: nil)
             self.mapView.centerCoordinate = self.pointAnnotation.coordinate
 			
-			
-			
-			
             self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
 			
-			let span = MKCoordinateSpanMake(0.05, 0.05)
-			let region = MKCoordinateRegionMake(localSearch.coordinate, span)
-			mapView.setRegion(region, animated: true)
+//			let span = MKCoordinateSpanMake(0.05, 0.05)
+//			let region = MKCoordinateRegionMake(localSearch.c, span)
+//			mapView.setRegion(region, animated: true)
         }
     }
+	
+	
+	// MARK: - Navigation
+	
+	// In a storyboard-based application, you will often want to do a little preparation before navigation
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		
+		if segue.identifier == "localSelecionado"{
+			if let novaView = segue.destination as? AdcNovoLocalController{
+				novaView.endereco = self.localllll
+			}
+		}
+	// Get the new view controller using segue.destinationViewController.
+	// Pass the selected object to the new view controller.
+	}
+	
+	
+	
 }
 

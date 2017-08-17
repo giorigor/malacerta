@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oCK-J0-woX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2243" y="-675"/>
+            <point key="canvasLocation" x="4620" y="-675"/>
         </scene>
         <!--Minhas Viagens-->
         <scene sceneID="B63-sR-bCP">
@@ -57,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="viagemIdentifier" textLabel="8lB-Ni-o0K" detailTextLabel="3Fh-nr-2sz" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="RU7-vT-wv1" customClass="TravelsCell" customModule="MalaCerta" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="viagemTableIdentifier" textLabel="8lB-Ni-o0K" detailTextLabel="3Fh-nr-2sz" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="RU7-vT-wv1" customClass="TravelsCell" customModule="MalaCerta" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RU7-vT-wv1" id="KA3-3C-rKI">
@@ -78,14 +79,9 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4aQ-Vv-jxh">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="bgImageLabel" destination="4aQ-Vv-jxh" id="GGs-sd-gS3"/>
                                     <outlet property="dateLabel" destination="3Fh-nr-2sz" id="hrF-nr-8Ny"/>
                                     <outlet property="localLabel" destination="8lB-Ni-o0K" id="jkB-Pi-48q"/>
                                     <segue destination="Rex-CX-0fa" kind="show" id="kgT-yd-DdP"/>
@@ -118,7 +114,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="OkV-o7-ayV" detailTextLabel="DNU-Q7-9sJ" style="IBUITableViewCellStyleValue1" id="6fT-xm-O8T" customClass="TimelineCell" customModule="MalaCerta" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timelineTableIdentifier" textLabel="OkV-o7-ayV" detailTextLabel="DNU-Q7-9sJ" style="IBUITableViewCellStyleValue1" id="6fT-xm-O8T" customClass="TimelineCell" customModule="MalaCerta" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6fT-xm-O8T" id="JCP-6V-xdd">
@@ -142,6 +138,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="atividadeLabel" destination="OkV-o7-ayV" id="HN8-kf-yRa"/>
+                                    <outlet property="horaLabel" destination="DNU-Q7-9sJ" id="aJk-xP-noN"/>
                                     <segue destination="tru-Hi-gDr" kind="show" id="H4w-3u-mCX"/>
                                 </connections>
                             </tableViewCell>
@@ -161,7 +159,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fC8-Ya-k3G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2244" y="143"/>
+            <point key="canvasLocation" x="3818" y="143"/>
         </scene>
         <!--Viagens-->
         <scene sceneID="8nU-y1-Q7Y">
@@ -231,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BGd-Ck-JbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3174" y="143"/>
+            <point key="canvasLocation" x="5861" y="143"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="h1r-DA-KmP">
@@ -378,6 +376,108 @@
             <point key="canvasLocation" x="365.60000000000002" y="837.93103448275872"/>
         </scene>
         <!--Novo Local-->
+        <scene sceneID="CqW-bJ-sdZ">
+            <objects>
+                <viewController id="xJZ-pG-bap" customClass="AdcNovoLocalController" customModule="MalaCerta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wfi-Vk-Igv"/>
+                        <viewControllerLayoutGuide type="bottom" id="LCe-n0-4LW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="goR-HZ-Qer">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ldP-rD-1VP">
+                                <rect key="frame" x="32" y="80" width="256" height="122"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7uA-z9-LiM">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVV-i4-hGq">
+                                                <rect key="frame" x="0.0" y="0.0" width="41" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e2C-f3-nbX">
+                                                <rect key="frame" x="57" y="0.0" width="199" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lgl-2A-vn7">
+                                        <rect key="frame" x="0.0" y="46" width="256" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Inicio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgK-tq-MtV">
+                                                <rect key="frame" x="0.0" y="0.0" width="80.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EKO-eB-ipo">
+                                                <rect key="frame" x="96.5" y="0.0" width="159.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YK1-KY-bWo">
+                                        <rect key="frame" x="0.0" y="92" width="256" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Fim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTt-cZ-ceH">
+                                                <rect key="frame" x="0.0" y="0.0" width="68" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1l6-Qj-zTM">
+                                                <rect key="frame" x="84" y="0.0" width="172" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7uA-z9-LiM" secondAttribute="trailing" id="DF4-Ys-Eco"/>
+                                    <constraint firstItem="lgl-2A-vn7" firstAttribute="leading" secondItem="ldP-rD-1VP" secondAttribute="leading" id="E5Z-L1-9Pn"/>
+                                    <constraint firstItem="YK1-KY-bWo" firstAttribute="leading" secondItem="ldP-rD-1VP" secondAttribute="leading" id="EML-F7-Ewb"/>
+                                    <constraint firstAttribute="trailing" secondItem="YK1-KY-bWo" secondAttribute="trailing" id="Xqt-2t-8ek"/>
+                                    <constraint firstAttribute="trailing" secondItem="lgl-2A-vn7" secondAttribute="trailing" id="gMJ-yA-rcS"/>
+                                    <constraint firstItem="7uA-z9-LiM" firstAttribute="leading" secondItem="ldP-rD-1VP" secondAttribute="leading" id="w4t-sz-p5J"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ldP-rD-1VP" secondAttribute="trailing" constant="16" id="4GL-8H-RFN"/>
+                            <constraint firstItem="ldP-rD-1VP" firstAttribute="centerX" secondItem="goR-HZ-Qer" secondAttribute="centerX" id="Fcd-vf-l5B"/>
+                            <constraint firstItem="ldP-rD-1VP" firstAttribute="top" secondItem="Wfi-Vk-Igv" secondAttribute="bottom" constant="16" id="JOM-gm-neI"/>
+                            <constraint firstItem="ldP-rD-1VP" firstAttribute="leading" secondItem="goR-HZ-Qer" secondAttribute="leadingMargin" constant="16" id="yka-nj-fqU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Novo Local" id="PgH-xw-pNQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7ON-xL-28Y">
+                            <connections>
+                                <segue destination="Rex-CX-0fa" kind="show" identifier="doneAdcLocal" id="qkF-oj-vCm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dataFimField" destination="1l6-Qj-zTM" id="Ii7-D5-XU1"/>
+                        <outlet property="dataInicioField" destination="EKO-eB-ipo" id="jGO-kR-CEI"/>
+                        <outlet property="localTextField" destination="e2C-f3-nbX" id="ZK7-y6-yH2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XRA-qt-caV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2964" y="-675"/>
+        </scene>
+        <!--Novo Local-->
         <scene sceneID="xFl-qa-Omp">
             <objects>
                 <viewController id="LWr-QZ-LmC" customClass="NovoDestinoController" customModule="MalaCerta" customModuleProvider="target" sceneMemberID="viewController">
@@ -390,7 +490,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vyb-SI-cZm">
-                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                                 <connections>
                                     <outlet property="delegate" destination="LWr-QZ-LmC" id="XRB-1a-3bJ"/>
                                 </connections>
@@ -405,11 +505,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Novo Local" id="LiG-8d-AbY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="PdU-eQ-ham">
-                            <connections>
-                                <action selector="showSearchBar:" destination="LWr-QZ-LmC" id="6mG-Eh-mRk"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="play" id="YcL-AR-Ds9">
+                                <connections>
+                                    <action selector="buttonProssegue:" destination="LWr-QZ-LmC" id="atI-eg-8BM"/>
+                                    <segue destination="xJZ-pG-bap" kind="show" identifier="localSelecionado" id="3gp-tn-FtX"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="PdU-eQ-ham">
+                                <connections>
+                                    <action selector="showSearchBar:" destination="LWr-QZ-LmC" id="6mG-Eh-mRk"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="Vyb-SI-cZm" id="leD-Id-HVN"/>
@@ -417,11 +525,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8X-F0-eBz" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1294" y="-675"/>
+            <point key="canvasLocation" x="2106" y="-675"/>
         </scene>
     </scenes>
     <resources>
         <image name="profile_icon" width="25" height="25"/>
         <image name="travels_icon" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="qkF-oj-vCm"/>
+    </inferredMetricsTieBreakers>
 </document>

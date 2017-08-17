@@ -44,12 +44,12 @@ class TravelsController: UITableViewController {
 
 	
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "viagemIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "viagemTableIdentifier", for: indexPath)
 		
 		if let novaCell = cell as? TravelsCell {
 			let viagem = viagens[indexPath.row]
 			novaCell.localLabel.text = viagem.titulo
-			novaCell.dateLabel.text = "\(viagem.inicio)  até  \(viagem.fim)"
+			novaCell.dateLabel.text = "\(String(describing: viagem.inicio))  até  \(String(describing: viagem.fim))"
 		}
 		
         return cell
