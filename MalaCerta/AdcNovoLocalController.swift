@@ -40,7 +40,8 @@ class AdcNovoLocalController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "doneAdcLocal"{
 			viagem = Viagem()
-			viagem.local = endereco
+			viagem.titulo = endereco.placemark.title
+			//viagem.local = endereco
 			let dateFormatter = DateFormatter()
 			dateFormatter.dateFormat = "dd MM yyyy"
 			viagem.inicio = dateFormatter.date(from: dataInicioField.text!)! as NSDate

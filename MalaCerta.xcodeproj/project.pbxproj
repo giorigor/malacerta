@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3F19B1711F45C1F1009772F6 /* AdcNovoLocalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19B1701F45C1F1009772F6 /* AdcNovoLocalController.swift */; };
+		3F19B1731F45D49B009772F6 /* AtividadeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19B1721F45D49B009772F6 /* AtividadeDAO.swift */; };
+		3F19B17A1F45DF73009772F6 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19B1791F45DF73009772F6 /* Usuario.swift */; };
+		3F19B17C1F45DFF3009772F6 /* UsuarioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19B17B1F45DFF3009772F6 /* UsuarioController.swift */; };
+		3F19B17E1F45E09C009772F6 /* UsuarioDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19B17D1F45E09C009772F6 /* UsuarioDAO.swift */; };
 		3F1F419E1F44648900244774 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F419D1F44648900244774 /* MapKit.framework */; };
 		3F1F41A01F4464A500244774 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F419F1F4464A500244774 /* CoreLocation.framework */; };
 		3F1F41A81F448EAE00244774 /* NovoDestinoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F41A71F448EAE00244774 /* NovoDestinoController.swift */; };
@@ -30,6 +34,10 @@
 
 /* Begin PBXFileReference section */
 		3F19B1701F45C1F1009772F6 /* AdcNovoLocalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdcNovoLocalController.swift; sourceTree = "<group>"; };
+		3F19B1721F45D49B009772F6 /* AtividadeDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtividadeDAO.swift; sourceTree = "<group>"; };
+		3F19B1791F45DF73009772F6 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		3F19B17B1F45DFF3009772F6 /* UsuarioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioController.swift; sourceTree = "<group>"; };
+		3F19B17D1F45E09C009772F6 /* UsuarioDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioDAO.swift; sourceTree = "<group>"; };
 		3F1F419D1F44648900244774 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3F1F419F1F4464A500244774 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3F1F41A71F448EAE00244774 /* NovoDestinoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoDestinoController.swift; sourceTree = "<group>"; };
@@ -117,9 +125,12 @@
 			children = (
 				3F9FBC641F3DD8E900F5A39F /* MalaCerta.xcdatamodeld */,
 				3F9FBC841F3DF2DA00F5A39F /* ViagemDAO.swift */,
+				3F19B1721F45D49B009772F6 /* AtividadeDAO.swift */,
 				3F9FBC861F3DF78E00F5A39F /* CoreDataManager.swift */,
 				3F9FBC881F3DF8B200F5A39F /* Viagem.swift */,
 				3F9FBC8A1F3DF8B900F5A39F /* Atividade.swift */,
+				3F19B1791F45DF73009772F6 /* Usuario.swift */,
+				3F19B17D1F45E09C009772F6 /* UsuarioDAO.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -134,6 +145,7 @@
 				3F9FBC7E1F3DEAFC00F5A39F /* PlaceDetailsController.swift */,
 				3F1F41A71F448EAE00244774 /* NovoDestinoController.swift */,
 				3F19B1701F45C1F1009772F6 /* AdcNovoLocalController.swift */,
+				3F19B17B1F45DFF3009772F6 /* UsuarioController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -224,16 +236,20 @@
 			files = (
 				3F9FBC7D1F3DEAEB00F5A39F /* TimelineCell.swift in Sources */,
 				3F9FBC771F3DDA1400F5A39F /* TimelineController.swift in Sources */,
+				3F19B17E1F45E09C009772F6 /* UsuarioDAO.swift in Sources */,
 				3F9FBC661F3DD8E900F5A39F /* MalaCerta.xcdatamodeld in Sources */,
 				3F9FBC7F1F3DEAFC00F5A39F /* PlaceDetailsController.swift in Sources */,
 				3F9FBC891F3DF8B200F5A39F /* Viagem.swift in Sources */,
 				3F9FBC5E1F3DD8E900F5A39F /* AppDelegate.swift in Sources */,
 				3F1F41A81F448EAE00244774 /* NovoDestinoController.swift in Sources */,
 				3F9FBC7B1F3DEAE200F5A39F /* TravelsCell.swift in Sources */,
+				3F19B17A1F45DF73009772F6 /* Usuario.swift in Sources */,
 				3F9FBC871F3DF78E00F5A39F /* CoreDataManager.swift in Sources */,
 				3F9FBC791F3DEAD300F5A39F /* TravelsController.swift in Sources */,
+				3F19B1731F45D49B009772F6 /* AtividadeDAO.swift in Sources */,
 				3F9FBC851F3DF2DA00F5A39F /* ViagemDAO.swift in Sources */,
 				3F9FBC8B1F3DF8B900F5A39F /* Atividade.swift in Sources */,
+				3F19B17C1F45DFF3009772F6 /* UsuarioController.swift in Sources */,
 				3F19B1711F45C1F1009772F6 /* AdcNovoLocalController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

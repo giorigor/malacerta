@@ -23,6 +23,13 @@ class ViagemDAO {
 		viagem.inicio = NSDate(timeIntervalSinceNow: 123456789.0)
 		viagem.fim = NSDate(timeInterval: 123456789.0, since: (viagem.inicio as Date?)!)
 		
+		let atividades = AtividadeDAO.getAtividades()
+		
+		for ativ: Atividade in atividades {
+			viagem.addToAtivsDaViagem(ativ)
+			ativ.viagemPai = viagem
+		}
+		
 		return [viagem]
 	}
 }

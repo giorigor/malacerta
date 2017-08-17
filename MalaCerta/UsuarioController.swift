@@ -1,28 +1,28 @@
 //
-//  PlaceDetailsController.swift
+//  UsuarioController.swift
 //  MalaCerta
 //
-//  Created by Student on 11/08/17.
+//  Created by Student on 17/08/17.
 //  Copyright © 2017 Student. All rights reserved.
 //
 
 import UIKit
 
-class PlaceDetailsController: UIViewController {
-	
-	var atividadeSelecionada: Atividade!
-	
-	@IBOutlet weak var horarioLabel: UILabel!
-	@IBOutlet weak var localLabel: UILabel!
+class UsuarioController: UIViewController {
 
-	@IBOutlet weak var enderecoLabel: UILabel!
+	var usuario = UsuarioDAO.getUsuario()
+	
+	@IBOutlet weak var bioLabel: UITextView!
+	@IBOutlet weak var localLabel: UILabel!
+	@IBOutlet weak var nomeLabel: UILabel!
+	@IBOutlet weak var photo: UIImageView!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-		localLabel.text = atividadeSelecionada.titulo
-		enderecoLabel.text = "Rua Pocaminhondas 120"
-		horarioLabel.text = "\(String(describing: atividadeSelecionada.inicio)) até \(String(describing: atividadeSelecionada.fim))"
-		
+		bioLabel.text = usuario.biografia
+		nomeLabel.text = usuario.nome
+		localLabel.text = usuario.localizacao
+		photo.image = UIImage(named: usuario.foto!)
         // Do any additional setup after loading the view.
     }
 

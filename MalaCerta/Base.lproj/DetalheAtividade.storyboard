@@ -99,6 +99,11 @@
                     <navigationItem key="navigationItem" title="Title" id="3TY-jc-kJy"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="enderecoLabel" destination="o6M-ad-ZFa" id="gBU-D2-bQG"/>
+                        <outlet property="horarioLabel" destination="20p-AR-BEE" id="KxT-2x-aCb"/>
+                        <outlet property="localLabel" destination="hXc-gh-SKs" id="mGg-5k-z1b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BGd-Ck-JbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

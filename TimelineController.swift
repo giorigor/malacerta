@@ -11,9 +11,15 @@ import UIKit
 class TimelineController: UITableViewController {
 	
 	var viagemSelecionada: Viagem!
+	
+	var atividades: [Atividade]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		atividades = viagemSelecionada.ativsDaViagem?.allObjects as! [Atividade]
+		
+//		navigationItem
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -78,14 +84,21 @@ class TimelineController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+		
+		if segue.identifier == "tenhoAtividade" {
+			if let ativDetailView = segue.destination as? PlaceDetailsController {
+				ativDetailView.atividadeSelecionada = atividades[(tableView.indexPathForSelectedRow?.row)!]
+			}
+		}
+		
     }
-    */
+
 
 }
