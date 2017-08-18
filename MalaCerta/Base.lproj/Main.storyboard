@@ -703,6 +703,14 @@
             </objects>
             <point key="canvasLocation" x="2105.7971014492755" y="-675"/>
         </scene>
+        <!--Detalhes-->
+        <scene sceneID="VvS-nU-fnu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detalhes" id="Lwx-En-8KI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XfT-IL-Vf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3174" y="143"/>
+        </scene>
     </scenes>
     <resources>
         <image name="profile_icon" width="25" height="25"/>
