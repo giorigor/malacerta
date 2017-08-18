@@ -177,10 +177,10 @@
             </objects>
             <point key="canvasLocation" x="4767" y="142"/>
         </scene>
-        <!--DetalheAtividade-->
+        <!--Detalhes-->
         <scene sceneID="xtr-Tw-CsG">
             <objects>
-                <viewControllerPlaceholder storyboardName="DetalheAtividade" id="DzV-qA-lYj" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Detalhes" id="DzV-qA-lYj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INd-oc-tPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6991" y="153"/>
@@ -470,7 +470,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vyb-SI-cZm">
-                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <connections>
                                     <outlet property="delegate" destination="LWr-QZ-LmC" id="XRB-1a-3bJ"/>
                                 </connections>
@@ -672,9 +672,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MiY-IZ-ZPH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iFj-fv-XuG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iFj-fv-XuG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -690,9 +691,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WT4-rY-Hlh" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qoD-M2-wkD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qoD-M2-wkD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -702,14 +704,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VgU-fi-adi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2105.7971014492755" y="-675"/>
-        </scene>
-        <!--Detalhes-->
-        <scene sceneID="VvS-nU-fnu">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Detalhes" id="Lwx-En-8KI" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XfT-IL-Vf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3174" y="143"/>
         </scene>
     </scenes>
     <resources>

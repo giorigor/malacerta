@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
 class PlaceDetailsController: UIViewController {
 	
 	var atividadeSelecionada: Atividade!
 	
+    @IBOutlet weak var mapView: MKMapView!
 	@IBOutlet weak var horarioLabel: UILabel!
 	@IBOutlet weak var localLabel: UILabel!
 
@@ -27,7 +30,17 @@ class PlaceDetailsController: UIViewController {
         dateFormatter.timeStyle = .none
         dateFormatter.locale = Locale(identifier: "pt_BR")
         horarioLabel.text = "\(dateFormatter.string(from: atividadeSelecionada.inicio! as Date))  até  \(dateFormatter.string(from: atividadeSelecionada.fim! as Date))"
-		
+        
+        var mapRegion = MKCoordinateRegion()
+        var coordinate = CLLocationCoordinate2D()
+        coordinate.latitude = atividadeSelecionada.latitude
+        coordinate.longitude = atividadeSelecionada.longitude
+        mapRegion.center = coordinate
+        mapRegion.span.latitudeDelta = 0.05
+        mapRegion.span.longitudeDelta = 0.05
+        mapView.setRegion(mapRegion, animated: false)
+        
+        
         // Do any additional setup after loading the view.
     }
 

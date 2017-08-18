@@ -11,7 +11,7 @@ import Foundation
 class ViagemDAO {
 	static func getViagens() -> [Viagem] {
 		let viagem = Viagem()
-		viagem.titulo = "Caeté"
+		viagem.titulo = "Belo Horizonte - MG"
 		
 		var componentesData = DateComponents()
 		componentesData.day = 28
