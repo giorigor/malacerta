@@ -22,6 +22,15 @@ class AdcNovaAtivController: UIViewController {
     var viagem: Viagem!
     
     var ativ: Atividade!
+    
+    
+    @IBAction func doneButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

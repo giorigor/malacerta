@@ -79,7 +79,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="deC-Nz-Ldv">
                             <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="LWr-QZ-LmC" kind="show" id="5Qt-uQ-P2s"/>
+                                <segue destination="WT4-rY-Hlh" kind="presentation" identifier="modalMapa" id="5Qt-uQ-P2s"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -168,14 +168,14 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="exc-SR-KGE">
                             <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="MiY-IZ-ZPH" kind="showDetail" action="showViewController:sender:" id="yNw-wy-Dda"/>
+                                <segue destination="MiY-IZ-ZPH" kind="modal" id="yNw-wy-Dda"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fC8-Ya-k3G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3815.9420289855075" y="141.84782608695653"/>
+            <point key="canvasLocation" x="4767" y="142"/>
         </scene>
         <!--DetalheAtividade-->
         <scene sceneID="xtr-Tw-CsG">
@@ -183,7 +183,7 @@
                 <viewControllerPlaceholder storyboardName="DetalheAtividade" id="DzV-qA-lYj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INd-oc-tPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5613" y="154"/>
+            <point key="canvasLocation" x="6991" y="153"/>
         </scene>
         <!--Viagens-->
         <scene sceneID="8nU-y1-Q7Y">
@@ -443,7 +443,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="7ON-xL-28Y">
                             <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="Rex-CX-0fa" kind="show" identifier="doneAdcLocal" id="qkF-oj-vCm"/>
+                                <action selector="doneButton:" destination="xJZ-pG-bap" id="jYO-uG-jBJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -455,7 +455,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRA-qt-caV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2964" y="-675"/>
+            <point key="canvasLocation" x="3871.0144927536235" y="-675"/>
         </scene>
         <!--Novo Local-->
         <scene sceneID="xFl-qa-Omp">
@@ -507,7 +507,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8X-F0-eBz" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2106" y="-675"/>
+            <point key="canvasLocation" x="3013.04347826087" y="-675"/>
         </scene>
         <!--Nova Atividade-->
         <scene sceneID="nls-o6-kYs">
@@ -559,7 +559,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ONT-93-dmP" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5596" y="-690.40479760119945"/>
+            <point key="canvasLocation" x="7106" y="-717"/>
         </scene>
         <!--Novo Local-->
         <scene sceneID="hcO-ou-9YV">
@@ -650,7 +650,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Sai-9F-cu9">
                             <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="DzV-qA-lYj" kind="showDetail" action="showViewController:sender:" id="My3-iK-re1"/>
+                                <action selector="doneButton:" destination="V2v-Zu-Mb0" id="aKg-WI-htk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -665,7 +665,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hm-Jw-kiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6599.1999999999998" y="-690.40479760119945"/>
+            <point key="canvasLocation" x="8109" y="-717"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="S1k-RD-s5T">
@@ -683,15 +683,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FH6-0p-D4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4656.8000000000002" y="-690.40479760119945"/>
+            <point key="canvasLocation" x="6165" y="-717"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="u08-Bi-K4I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WT4-rY-Hlh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qoD-M2-wkD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LWr-QZ-LmC" kind="relationship" relationship="rootViewController" id="D2Z-P3-fKC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VgU-fi-adi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2105.7971014492755" y="-675"/>
         </scene>
     </scenes>
     <resources>
         <image name="profile_icon" width="25" height="25"/>
         <image name="travels_icon" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="kgT-yd-DdP"/>
-        <segue reference="nk9-T5-mAl"/>
-    </inferredMetricsTieBreakers>
 </document>

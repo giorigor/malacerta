@@ -11,7 +11,9 @@ import Foundation
 class AtividadeDAO {
 	static func getAtividades() -> [Atividade] {
 		let atividade = Atividade()
-		atividade.titulo = "Visita ao Museu de Arte Moderna"
+		atividade.titulo = "Visita ao CCBB"
+        
+        atividade.endereco = "Praça da Liberdade, 450"
 		
 		var componentesData = DateComponents()
 		componentesData.day = 28
@@ -36,6 +38,8 @@ class AtividadeDAO {
 		
 		let atividade2 = Atividade()
 		atividade2.titulo = "Jantar no Porcão"
+        
+        atividade2.endereco = "Avenida Raja Gabáglia, 2671"
 		
 		componentesData.day = 29
 		componentesData.hour = 21

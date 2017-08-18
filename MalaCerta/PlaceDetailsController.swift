@@ -20,8 +20,13 @@ class PlaceDetailsController: UIViewController {
         super.viewDidLoad()
 		
 		localLabel.text = atividadeSelecionada.titulo
-		enderecoLabel.text = "Rua Pocaminhondas 120"
-		horarioLabel.text = "\(String(describing: atividadeSelecionada.inicio)) até \(String(describing: atividadeSelecionada.fim))"
+		enderecoLabel.text = atividadeSelecionada.endereco
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale(identifier: "pt_BR")
+        horarioLabel.text = "\(dateFormatter.string(from: atividadeSelecionada.inicio! as Date))  até  \(dateFormatter.string(from: atividadeSelecionada.fim! as Date))"
 		
         // Do any additional setup after loading the view.
     }

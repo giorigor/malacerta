@@ -11,15 +11,37 @@ import MapKit
 import CoreData
 
 class AdcNovoLocalController: UIViewController {
+    
+    var usuario: Usuario!
+    
+    var endereco: MKMapItem!
+    
+    var viagem: Viagem!
+    
 	
 	@IBOutlet weak var dataInicioField: UITextField!
 	@IBOutlet weak var dataFimField: UITextField!
 	@IBOutlet weak var localTextField: UITextField!
 	
-	var endereco: MKMapItem!
-	
-	var viagem: Viagem!
-	
+    @IBAction func doneButton(_ sender: Any) {
+        usuario = UsuarioDAO.getUsuario()
+        
+        viagem = Viagem()
+        viagem.titulo = endereco.placemark.title
+        //viagem.local = endereco
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MM yyyy"
+        viagem.inicio = dateFormatter.date(from: dataInicioField.text!)! as NSDate
+        viagem.fim = dateFormatter.date(from: dataFimField.text!)! as NSDate
+        
+//        if let timelineView = segue.destination as? TimelineController {
+//            timelineView.viagemSelecionada = viagem
+//        }
+        
+        usuario.addToViagensDoUser(viagem)
+        CoreDataManager.sharedManager().saveContext()
+        self.dismiss(animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

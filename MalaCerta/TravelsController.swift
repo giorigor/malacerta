@@ -18,6 +18,7 @@ class TravelsController: UITableViewController {
         
 		viagens = UsuarioDAO.getUsuario().viagensDoUser?.allObjects as! [Viagem]
         viagens.sort(by: { $1.inicio?.compare($0.inicio! as Date) == ComparisonResult.orderedDescending} )
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
