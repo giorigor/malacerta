@@ -30,6 +30,7 @@
 		3F9FBC891F3DF8B200F5A39F /* Viagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC881F3DF8B200F5A39F /* Viagem.swift */; };
 		3F9FBC8B1F3DF8B900F5A39F /* Atividade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FBC8A1F3DF8B900F5A39F /* Atividade.swift */; };
 		3FADB6A21F44931F00DB801B /* DetalheAtividade.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FADB6A01F44931F00DB801B /* DetalheAtividade.storyboard */; };
+		78960EEB1F469A6800B62F9D /* AdcNovaAtivController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78960EEA1F469A6800B62F9D /* AdcNovaAtivController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		3F9FBC881F3DF8B200F5A39F /* Viagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Viagem.swift; sourceTree = "<group>"; };
 		3F9FBC8A1F3DF8B900F5A39F /* Atividade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atividade.swift; sourceTree = "<group>"; };
 		3FADB6A11F44931F00DB801B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DetalheAtividade.storyboard; sourceTree = "<group>"; };
+		78960EEA1F469A6800B62F9D /* AdcNovaAtivController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdcNovaAtivController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				3F9FBC7E1F3DEAFC00F5A39F /* PlaceDetailsController.swift */,
 				3F1F41A71F448EAE00244774 /* NovoDestinoController.swift */,
 				3F19B1701F45C1F1009772F6 /* AdcNovoLocalController.swift */,
+				78960EEA1F469A6800B62F9D /* AdcNovaAtivController.swift */,
 				3F19B17B1F45DFF3009772F6 /* UsuarioController.swift */,
 			);
 			name = Controller;
@@ -240,6 +243,7 @@
 				3F9FBC661F3DD8E900F5A39F /* MalaCerta.xcdatamodeld in Sources */,
 				3F9FBC7F1F3DEAFC00F5A39F /* PlaceDetailsController.swift in Sources */,
 				3F9FBC891F3DF8B200F5A39F /* Viagem.swift in Sources */,
+				78960EEB1F469A6800B62F9D /* AdcNovaAtivController.swift in Sources */,
 				3F9FBC5E1F3DD8E900F5A39F /* AppDelegate.swift in Sources */,
 				3F1F41A81F448EAE00244774 /* NovoDestinoController.swift in Sources */,
 				3F9FBC7B1F3DEAE200F5A39F /* TravelsCell.swift in Sources */,

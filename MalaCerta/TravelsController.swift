@@ -15,8 +15,9 @@ class TravelsController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-		viagens = ViagemDAO.getViagens()
+        
+		viagens = UsuarioDAO.getUsuario().viagensDoUser?.allObjects as! [Viagem]
+        viagens.sort(by: { $1.inicio?.compare($0.inicio! as Date) == ComparisonResult.orderedDescending} )
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -49,7 +50,12 @@ class TravelsController: UITableViewController {
 		if let novaCell = cell as? TravelsCell {
 			let viagem = viagens[indexPath.row]
 			novaCell.localLabel.text = viagem.titulo
-			novaCell.dateLabel.text = "\(String(describing: viagem.inicio))  até  \(String(describing: viagem.fim))"
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            dateFormatter.timeStyle = .none
+            dateFormatter.locale = Locale(identifier: "pt_BR")
+			novaCell.dateLabel.text = "\(dateFormatter.string(from: viagem.inicio! as Date))  até  \(dateFormatter.string(from: viagem.fim! as Date))"
 		}
 		
         return cell

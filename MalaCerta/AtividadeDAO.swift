@@ -28,6 +28,9 @@ class AtividadeDAO {
 		
 		componentesData.hour = 16
 		atividade.fim = calendar?.date(from: componentesData)! as NSDate?
+        
+        atividade.latitude = -19.932098
+        atividade.longitude = -43.937290
 
 		
 		
@@ -41,6 +44,9 @@ class AtividadeDAO {
 		atividade2.inicio = calendar?.date(from: componentesData)! as NSDate?
 		componentesData.hour = 23
 		atividade2.fim = calendar?.date(from: componentesData)! as NSDate?
+        
+        atividade2.latitude = -19.960421
+        atividade2.longitude = -43.957247
 
 		
 		return [atividade, atividade2]

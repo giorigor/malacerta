@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Atividade" representedClassName=".Atividade" syncable="YES" codeGenerationType="category">
+        <attribute name="endereco" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fim" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="inicio" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -13,6 +14,7 @@
         <attribute name="foto" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="localizacao" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="viagensDoUser" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Viagem" inverseName="userViajante" inverseEntity="Viagem" syncable="YES"/>
     </entity>
     <entity name="Viagem" representedClassName=".Viagem" syncable="YES" codeGenerationType="category">
         <attribute name="fim" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -20,10 +22,11 @@
         <attribute name="local" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="ativsDaViagem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Atividade" inverseName="viagemPai" inverseEntity="Atividade" syncable="YES"/>
+        <relationship name="userViajante" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuario" inverseName="viagensDoUser" inverseEntity="Usuario" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Atividade" positionX="-36" positionY="9" width="128" height="135"/>
-        <element name="Viagem" positionX="-54" positionY="-9" width="128" height="120"/>
-        <element name="Usuario" positionX="-45" positionY="54" width="128" height="105"/>
+        <element name="Atividade" positionX="-36" positionY="9" width="128" height="150"/>
+        <element name="Usuario" positionX="-45" positionY="54" width="128" height="120"/>
+        <element name="Viagem" positionX="-54" positionY="-9" width="128" height="135"/>
     </elements>
 </model>

@@ -15,6 +15,7 @@ class UsuarioDAO {
 		usuario.localizacao = "Belo Horizonte, MG"
 		usuario.biografia = "Estudante de engenharia de software, viajando só na maionese por que dinheiro que é bom eu não tenho não."
 		usuario.foto = "igor"
+        usuario.addToViagensDoUser(ViagemDAO.getViagens()[0])
 		return usuario
 	}
 }

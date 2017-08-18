@@ -12,6 +12,9 @@ class TimelineCell: UITableViewCell {
 
     @IBOutlet weak var horaLabel: UILabel!
     @IBOutlet weak var atividadeLabel: UILabel!
+    @IBOutlet weak var hora2Label: UILabel!
+    @IBOutlet weak var alertaLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
